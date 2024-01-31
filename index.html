@@ -1,13 +1,224 @@
-<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,1000&display=swap" rel="stylesheet"> 
-    <title>Lama Dev Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Black+Ops+One&family=Ephesis&family=Felipa&family=League+Script&family=Marvel&family=Montserrat:wght@100&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/c783fb2b9a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="#" class="nav__logo"><img src='./images/Logo.png'></a>
+            <ul class="nav__links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#organic-material">Organic Material</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="nav__socials">
+                <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+            <button class="nav__toggle-btn" id="nav__toggle-open"><i class="fa-solid fa-bars"></i></button>
+            <button class="nav__toggle-btn" id="nav__toggle-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </nav>
+    <header>
+        <div class="container header__container">
+            <div class="header__left">
+                <div class="header__image-lg"><img src="./images/image1.jpg"></div>
+                <div class="header__image-sm"><img src="./images/image1.jpg"></div>
+            </div>
+            <div class="header__right">
+                <h1>Nature</h1>
+                <p>Optimizing natural processes through quantitative analysis.</p>
+                <div class="header__frames">
+                    <div class="header__frame">
+                        <img src="./images/frame1.jpg">
+                    </div>
+                    <div class="header__frame">
+                        <img src="./images/frame2.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia neque quam laudantium beatae, perspiciatis natus. Laboriosam unde culpa maxime amet neque voluptate accusamus, consequatur laborum quo, aliquid facere illo?</p>
+        <div class="container about__container">
+            <ul class="about__left">
+                <li class="about__item obtain__data active">
+                    <span><i class="fa-solid fa-chart-line"></i></span>
+                    <div>
+                        <h3>Obtain Data</h3>
+                    </div>
+                </li>
+                <li class="about__item analyze__results">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <div>
+                        <h3>Analyse Results</h3>
+                    </div>
+                </li>
+                <li class="about__item optimize__outcome">
+                    <span><i class="fa-solid fa-chart-simple"></i></span>
+                    <div>
+                        <h3>Optimize Outcome</h3>
+                    </div>
+                </li>
+            </ul>
+            <article class="about__right">
+                <h3>Obtain Data</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ullam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odio repudiandae consequuntur voluptatum ad, dicta officia? Praesentium amet labore explicabo natus minus fugit similique, aspernatur eaque neque animi quisquam deserunt.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis facilis quidem dolorum tempora maiores nulla?</p>
+            </article>
+        </div>
+
+    </section>
+
+
+    <section class="information" id="organic-material">
+        <h2>Organic Material</h2>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ipsum nisi officiis quidem sequi dolore, repudiandae blanditiis vitae dolor, hic ipsa quia enim quasi sint laudantium libero maxime! Cumque, omnis!</p>
+        <ul class="info__categories">
+            <li data-filter="*">All</li>
+            <li data-filter=".flora">Flora</li>
+            <li data-filter=".fauna">Fauna</li>
+        </ul>
+        <div class="container info__container">
+            <article class="info mix flora" data-order="1">
+                <div class="info__image">
+                    <img src="./images/image3.jpg">
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, minus autem fugit cum veniam aperiam est error quam commodi provident voluptas praesentium animi nam eius earum omnis dolores modi molestias?</p>
+                <div class="info__cta">
+                    <a href="#contact" class="btn">Discover More</a>
+                </div>
+
+            </article>
+            <article class="info mix fauna" data-order="2">
+                <div class="info__image">
+                    <img src="./images/image2.jpg">
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, minus autem fugit cum veniam aperiam est error quam commodi provident voluptas praesentium animi nam eius earum omnis dolores modi molestias?</p>
+                <div class="info__cta">
+                    <a href="#contact" class="btn">Discover More</a>
+                </div>
+
+            </article>
+            <article class="info mix flora" data-order="3">
+                <div class="info__image">
+                    <img src="./images/image4.jpg">
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, minus autem fugit cum veniam aperiam est error quam commodi provident voluptas praesentium animi nam eius earum omnis dolores modi molestias?</p>
+                <div class="info__cta">
+                    <a href="#contact" class="btn">Discover More</a>
+                </div>
+
+            </article>
+            <article class="info mix fauna" data-order="4">
+                <div class="info__image">
+                    <img src="./images/image5.jpg">
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, minus autem fugit cum veniam aperiam est error quam commodi provident voluptas praesentium animi nam eius earum omnis dolores modi molestias?</p>
+                <div class="info__cta">
+                    <a href="#contact" class="btn">Discover More</a>
+                </div>
+
+            </article>
+            
+
+        </div>
+    </section>
+    
+
+    <section id="analytics">
+        <div class="container analytics__container">
+            <h2>Analytics</h2>
+            <p>Accumulative output of natural material in relation to its effect.</p>
+            <canvas id="chart">
+
+            </canvas>
+        </div>
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+        <div class="container contact__container">
+            <div class="contact__options">
+                <article class="contact__option">
+                    <div class="contact__option-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h4>Email</h4>
+                    <a href="mailto:nature@gmail.com">nature@gmail.com</a>
+                </article>
+                <article class="contact__option">
+                    <div class="contact__option-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h4>Mobile</h4>
+                    <h5>+61 477 114 441</h5>
+                </article>
+            </div>
+            <form action="https://formspree.io/f/xdoqojdw" method="POST" id="contact-form">
+                <input type="text" name="name" placeholder="Full Name" required />
+                <input type="text" name="email" placeholder="Email" required />
+                <textarea name="message" id='' rows="7" placeholder="Message" required></textarea>
+                <button type="submit" class='btn btn-primary' onClick="sendMail();">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__1">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#organic-material">Orgainic Material</a></li>
+                    <li><a href="#analytics">Analytics</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+            </div>
+            <div class="footer__2">
+                <h4>Privacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+    
+                
+            </div>
+            <div class="footer__3">
+                <h4>Contact Us</h4>
+                <p>+61 477 114 441</p>
+                <p>nature@gmail.com</p>
+    
+                
+            </div>
+            <div class="footer__4">
+                <ul class="footer__socials">
+                    <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./data.js"></script>
+    <script src="./mix/dist/mixitup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
 </html>
