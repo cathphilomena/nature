@@ -566,6 +566,11 @@ footer ul li a:hover {
         width: var(--container-width-sm)
     }
 
+    .header__image-lg {
+        width: 90%;
+        margin-inline: auto;
+    }
+
     .info__container {
         grid-template-columns: 1fr;
     }
